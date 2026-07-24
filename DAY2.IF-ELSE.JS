@@ -86,3 +86,125 @@ else {
     console.log(c + " is Largest");
 
 }
+
+
+
+/* CHECK LEAP YEAR */
+
+// Store year
+let year = 2024;
+
+// Check leap year
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+
+    console.log(year + " is a Leap Year");
+
+} else {
+
+    console.log(year + " is NOT a Leap Year");
+
+}
+
+
+
+/* CHECK GRADE BASED ON MARKS */ // Student marks
+let marks = 86;
+
+// Check grade
+if (marks >= 90) {
+
+    console.log("Grade A");
+
+} else if (marks >= 80) {
+
+    console.log("Grade B");
+
+} else if (marks >= 70) {
+
+    console.log("Grade C");
+
+} else if (marks >= 60) {
+
+    console.log("Grade D");
+
+} else {
+
+    console.log("Grade F");
+
+}
+
+
+
+
+/* CHECK divisible by 5 & 11 */
+
+// Store a number
+let number = 55;
+
+// Check divisibility
+if (number % 5 === 0 && number % 11 === 0) {
+
+    console.log(number + " is divisible by both 5 and 11");
+
+} else {
+
+    console.log(number + " is NOT divisible by both 5 and 11");
+
+}
+
+
+/* check character type*/
+
+let ch = "@";
+
+// Check character type
+if (ch >= "A" && ch <= "Z") {
+
+    console.log("Uppercase Letter");
+
+} else if (ch >= "a" && ch <= "z") {
+
+    console.log("Lowercase Letter");
+
+} else if (ch >= "0" && ch <= "9") {
+
+    console.log("Digit");
+
+} else {
+
+    console.log("Special Character");
+
+}
+
+
+
+/* electric bill calculator */
+
+
+
+let units = 150;
+
+// Variable to store bill
+let bill;
+
+// Calculate bill
+if (units <= 100) {
+
+    bill = units * 5;
+
+} else if (units <= 200) {
+
+    bill = units * 7;
+
+} else if (units <= 300) {
+
+    bill = units * 10;
+
+} else {
+
+    bill = units * 12;
+
+}
+
+// Print result
+console.log("Electricity Bill = ₹" + bill);
