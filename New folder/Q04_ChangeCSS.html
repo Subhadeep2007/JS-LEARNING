@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1 id="heading">
+        JavaScript
+    </h1>
+
+    <button onclick="changeStyle()">
+Style
+</button>
+
+    <script>
+        const changeStyle = () => {
+
+            const heading =
+                document.getElementById("heading");
+
+            heading.style.color = "blue";
+
+            heading.style.backgroundColor =
+                "yellow";
+
+            heading.style.padding = "20px";
+
+        };
+    </script>
+
+</body>
+
+</html>

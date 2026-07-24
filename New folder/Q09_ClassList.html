@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .red {
+            color: red;
+            font-size: 35px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="heading">
+
+        JavaScript
+
+    </h1>
+
+    <button>
+
+Toggle Class
+
+</button>
+
+    <script>
+        const heading =
+            document.getElementById("heading");
+
+        const button =
+            document.querySelector("button");
+
+        button.addEventListener("click", () => {
+
+            heading.classList.toggle("red");
+
+        });
+    </script>
+
+</body>
+
+</html>

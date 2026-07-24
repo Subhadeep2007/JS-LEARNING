@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Counter App</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="count">
+
+        0
+
+    </h1>
+
+    <button id="increase">
+
++</button>
+
+    <button id="decrease">
+
+-</button>
+
+    <button id="reset">
+
+Reset</button>
+
+    <script>
+        // Counter Variable
+        let count = 0;
+
+        // Select Elements
+        const heading =
+            document.getElementById("count");
+
+        const increase =
+            document.getElementById("increase");
+
+        const decrease =
+            document.getElementById("decrease");
+
+        const reset =
+            document.getElementById("reset");
+
+        // Update UI
+        const updateCount = () => {
+
+            heading.innerText = count;
+
+        };
+
+        // Increase
+        increase.addEventListener("click", () => {
+
+            count++;
+
+            updateCount();
+
+        });
+
+        // Decrease
+        decrease.addEventListener("click", () => {
+
+            count--;
+
+            updateCount();
+
+        });
+
+        // Reset
+        reset.addEventListener("click", () => {
+
+            count = 0;
+
+            updateCount();
+
+        });
+    </script>
+
+</body>
+
+</html>

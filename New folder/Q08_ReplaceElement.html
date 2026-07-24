@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="container">
+
+        <h2 id="oldHeading">
+            Old Heading
+        </h2>
+
+    </div>
+
+    <button id="replaceBtn">
+Replace
+</button>
+
+    <script>
+        const button =
+            document.getElementById("replaceBtn");
+
+        button.addEventListener("click", () => {
+
+            const newHeading =
+                document.createElement("h2");
+
+            newHeading.innerText =
+                "New Heading";
+
+            const oldHeading =
+                document.getElementById("oldHeading");
+
+            document
+                .getElementById("container")
+                .replaceChild(newHeading, oldHeading);
+
+        });
+    </script>
+
+</body>
+
+</html>

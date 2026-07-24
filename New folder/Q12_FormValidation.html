@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>
+
+        Login Form
+
+    </h2>
+
+    <input id="username" type="text" placeholder="Enter Username">
+
+    <br><br>
+
+    <input id="password" type="password" placeholder="Enter Password">
+
+    <br><br>
+
+    <button id="login">
+
+Login
+
+</button>
+
+    <p id="message"></p>
+
+    <script>
+        const loginButton =
+            document.getElementById("login");
+
+        loginButton.addEventListener("click", () => {
+
+            const username =
+                document.getElementById("username").value;
+
+            const password =
+                document.getElementById("password").value;
+
+            const message =
+                document.getElementById("message");
+
+            if (username === "" || password === "") {
+
+                message.innerText =
+                    "Please fill all fields";
+
+                message.style.color = "red";
+
+            } else {
+
+                message.innerText =
+                    "Login Successful";
+
+                message.style.color = "green";
+
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>

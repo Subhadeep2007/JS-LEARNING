@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+
+<head>
+    <title>getElementById</title>
+</head>
+
+<body>
+
+    <h1 id="title">Hello JavaScript</h1>
+
+    <button onclick="changeText()">
+        Click Me
+    </button>
+
+    <script>
+        // Function
+        const changeText = () => {
+
+            // Select element using id
+            const heading =
+                document.getElementById("title");
+
+            // Change text
+            heading.innerText =
+                "Welcome to DOM";
+
+        };
+    </script>
+
+</body>
+
+</html>

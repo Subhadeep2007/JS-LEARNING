@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>
+
+        Todo App
+
+    </h2>
+
+    <input id="task" placeholder="Enter Task">
+
+    <button id="add">
+
+Add
+
+</button>
+
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        const addButton =
+            document.getElementById("add");
+
+        const list =
+            document.getElementById("list");
+
+        addButton.addEventListener("click", () => {
+
+            const task =
+                document.getElementById("task").value;
+
+            if (task === "") return;
+
+            const li =
+                document.createElement("li");
+
+            li.innerText = task;
+
+            list.appendChild(li);
+
+            document.getElementById("task").value = "";
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dark Mode</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            transition: 0.3s;
+        }
+        
+        .dark {
+            background: black;
+            color: white;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>
+
+        Dark Mode Toggle
+
+    </h1>
+
+    <button id="toggle">
+
+Toggle Theme
+
+</button>
+
+    <script>
+        // Select Elements
+        const body = document.body;
+
+        const button =
+            document.getElementById("toggle");
+
+        // Toggle Theme
+        button.addEventListener("click", () => {
+
+            body.classList.toggle("dark");
+
+        });
+    </script>
+
+</body>
+
+</html>

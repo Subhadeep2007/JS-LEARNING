@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Element</title>
+</head>
+
+<body>
+
+    <button id="btn">
+        Add Heading
+    </button>
+
+    <div id="container"></div>
+
+    <script>
+        // Select button
+        const button = document.getElementById("btn");
+
+        // Add Click Event
+        button.addEventListener("click", () => {
+
+            // Create new h2 element
+            const heading = document.createElement("h2");
+
+            // Add text
+            heading.innerText = "Welcome to JavaScript DOM";
+
+            // Append element
+            document
+                .getElementById("container")
+                .appendChild(heading);
+
+        });
+    </script>
+
+</body>
+
+</html>
