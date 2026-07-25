@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Login System</title>
+
+</head>
+
+<body>
+
+    <h2>Login System</h2>
+
+    <input type="text" id="username" placeholder="Enter Username">
+
+    <br><br>
+
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <br><br>
+
+    <button onclick="login()">
+
+        Login
+
+    </button>
+
+    <button onclick="logout()">
+
+        Logout
+
+    </button>
+
+    <h3 id="message"></h3>
+
+    <script>
+        // Check Login Status
+        const checkLogin = () => {
+
+            const user = JSON.parse(
+
+                localStorage.getItem("user")
+
+            );
+
+            if (user) {
+
+                document.getElementById(
+
+                        "message"
+
+                    ).innerHTML =
+
+                    `Welcome ${user.username}`;
+
+            }
+
+        };
+
+        // Login Function
+        const login = () => {
+
+            const username =
+
+                document.getElementById(
+
+                    "username"
+
+                ).value;
+
+            const password =
+
+                document.getElementById(
+
+                    "password"
+
+                ).value;
+
+            // Demo Login
+            if (
+
+                username === "admin"
+
+                &&
+
+                password === "12345"
+
+            ) {
+
+                const user = {
+
+                    username,
+
+                    isLoggedIn: true
+
+                };
+
+                localStorage.setItem(
+
+                    "user",
+
+                    JSON.stringify(user)
+
+                );
+
+                document.getElementById(
+
+                        "message"
+
+                    ).innerHTML =
+
+                    `Welcome ${username}`;
+
+            } else {
+
+                alert("Invalid Username or Password");
+
+            }
+
+        };
+
+        // Logout Function
+        const logout = () => {
+
+            localStorage.removeItem("user");
+
+            document.getElementById(
+
+                    "message"
+
+                ).innerHTML =
+
+                "Logged Out";
+
+        };
+
+        // Auto Login
+        checkLogin();
+    </script>
+
+</body>
+
+</html>

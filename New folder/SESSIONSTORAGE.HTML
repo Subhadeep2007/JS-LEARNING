@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Login System Using Session Storage</title>
+
+</head>
+
+<body>
+
+    <h2>Login System (Session Storage)</h2>
+
+    <input type="text" id="username" placeholder="Enter Username">
+
+    <br><br>
+
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <br><br>
+
+    <button onclick="login()">
+
+        Login
+
+    </button>
+
+    <button onclick="logout()">
+
+        Logout
+
+    </button>
+
+    <h3 id="message"></h3>
+
+    <script>
+        /*
+                =========================================
+                Check Login Status
+                Runs whenever page loads.
+                =========================================
+                */
+
+        const checkLogin = () => {
+
+            // Read user from Session Storage
+            const user = JSON.parse(
+
+                sessionStorage.getItem("user")
+
+            );
+
+            if (user) {
+
+                document.getElementById(
+
+                        "message"
+
+                    ).innerHTML =
+
+                    `Welcome ${user.username}`;
+
+            }
+
+        };
+
+        /*
+        =========================================
+        Login Function
+        =========================================
+        */
+
+        const login = () => {
+
+            // Read Input Values
+            const username = document.getElementById(
+
+                "username"
+
+            ).value;
+
+            const password = document.getElementById(
+
+                "password"
+
+            ).value;
+
+            // Demo Login
+            if (
+
+                username === "admin"
+
+                &&
+
+                password === "12345"
+
+            ) {
+
+                // Create User Object
+                const user = {
+
+                    username,
+
+                    isLoggedIn: true
+
+                };
+
+                // Save User in Session Storage
+                sessionStorage.setItem(
+
+                    "user",
+
+                    JSON.stringify(user)
+
+                );
+
+                document.getElementById(
+
+                        "message"
+
+                    ).innerHTML =
+
+                    `Welcome ${username}`;
+
+            } else {
+
+                alert(
+
+                    "Invalid Username or Password"
+
+                );
+
+            }
+
+        };
+
+        /*
+        =========================================
+        Logout Function
+        =========================================
+        */
+
+        const logout = () => {
+
+            // Remove User
+            sessionStorage.removeItem(
+
+                "user"
+
+            );
+
+            document.getElementById(
+
+                    "message"
+
+                ).innerHTML =
+
+                "Logged Out";
+
+        };
+
+        // Auto Check Login
+        checkLogin();
+    </script>
+
+</body>
+
+</html>

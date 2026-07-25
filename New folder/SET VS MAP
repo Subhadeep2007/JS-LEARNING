@@ -1,0 +1,21 @@
+Feaature	Set	Map
+Stores	Unique Values	Key-Value Pairs
+Duplicate Allowed	❌ No	Keys ❌, Values ✅
+Access	Value	Key
+Mostly Used	Remove Duplicates	Cache, Lookup
+Size	.size	.size
+
+
+
+
+
+
+
+
+Method	Purpose
+new Promise()	Create Promise
+.then()	Handle Success
+.catch()	Handle Error
+Promise.all()	Wait for All
+Promise.race()	First Completed
+async/await	Cleaner Promise Syntax
