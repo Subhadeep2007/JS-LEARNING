@@ -64,3 +64,48 @@ Convert JSON
 
 JavaScript Object
 */
+/*
+=========================================
+Question 03
+Topic: Async Await
+Difficulty: Easy
+
+Problem:
+Fetch users using
+async/await.
+=========================================
+*/
+
+// Arrow Function
+const getUsers = async() => {
+
+    const response = await fetch(
+
+        "https://jsonplaceholder.typicode.com/users"
+
+    );
+
+    const users = await response.json();
+
+    console.log(users);
+
+};
+
+// Function Call
+getUsers();
+
+/*
+Explanation
+
+await
+
+Waits until
+
+fetch()
+
+is completed.
+
+Much cleaner than
+
+.then()
+*/
