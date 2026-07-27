@@ -109,3 +109,46 @@ Much cleaner than
 
 .then()
 */
+
+
+
+/*
+=========================================
+Question 04
+Topic: GET Single User
+Difficulty: Easy
+
+Problem:
+Get one user.
+=========================================
+*/
+
+// Arrow Function
+const getUser = async() => {
+
+    const response = await fetch(
+
+        "https://jsonplaceholder.typicode.com/users/1"
+
+    );
+
+    const user = await response.json();
+
+    console.log(user);
+
+};
+
+// Function Call
+getUser();
+
+/*
+Output
+
+{
+
+id:1,
+
+name:"Leanne Graham"
+
+}
+*/
