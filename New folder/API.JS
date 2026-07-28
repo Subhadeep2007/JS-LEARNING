@@ -152,3 +152,61 @@ name:"Leanne Graham"
 
 }
 */
+/*
+=========================================
+Question 05
+Topic: Display API Data
+Difficulty: Medium
+
+Problem:
+Print all user names.
+=========================================
+*/
+
+// Arrow Function
+const displayUsers = async() => {
+
+    const response = await fetch(
+
+        "https://jsonplaceholder.typicode.com/users"
+
+    );
+
+    const users = await response.json();
+
+    users.forEach((user) => {
+
+        console.log(user.name);
+
+    });
+
+};
+
+// Function Call
+displayUsers();
+
+/*
+Output
+
+Leanne Graham
+
+Ervin Howell
+
+...
+
+Explanation
+
+API
+
+↓
+
+Array
+
+↓
+
+forEach()
+
+↓
+
+Print Data
+*/
