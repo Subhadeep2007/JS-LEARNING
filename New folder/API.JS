@@ -210,3 +210,70 @@ forEach()
 
 Print Data
 */
+/*
+=========================================
+Question 06
+Topic: try...catch
+Difficulty: Easy
+
+Problem:
+Handle API errors using
+try...catch.
+=========================================
+*/
+
+// Arrow Function
+const getUsers = async() => {
+
+    try {
+
+        const response = await fetch(
+
+            "https://jsonplaceholder.typicode.com/users"
+
+        );
+
+        const users = await response.json();
+
+        console.log(users);
+
+    } catch (error) {
+
+        console.log(
+
+            "Error:",
+
+            error.message
+
+        );
+
+    }
+
+};
+
+// Function Call
+getUsers();
+
+/*
+Explanation
+
+try
+
+↓
+
+Run Code
+
+catch
+
+↓
+
+Handle Error
+
+Real Project
+
+API
+
+Database
+
+Authentication
+*/
