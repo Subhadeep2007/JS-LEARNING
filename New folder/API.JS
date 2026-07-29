@@ -277,3 +277,72 @@ Database
 
 Authentication
 */
+/*
+=========================================
+Question 07
+Topic: response.ok
+Difficulty: Medium
+
+Problem:
+Check whether API
+request is successful.
+=========================================
+*/
+
+// Arrow Function
+const getUser = async() => {
+
+    try {
+
+        const response = await fetch(
+
+            "https://jsonplaceholder.typicode.com/users/100"
+
+        );
+
+        if (!response.ok) {
+
+            throw new Error(
+
+                "User Not Found"
+
+            );
+
+        }
+
+        const user = await response.json();
+
+        console.log(user);
+
+    } catch (error) {
+
+        console.log(
+
+            error.message
+
+        );
+
+    }
+
+};
+
+// Function Call
+getUser();
+
+/*
+Explanation
+
+response.ok
+
+true
+
+↓
+
+Success
+
+false
+
+↓
+
+Throw Error
+*/
