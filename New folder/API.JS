@@ -490,3 +490,62 @@ Edit Profile
 
 Update Product
 */
+
+/*
+=========================================
+Question 10
+Topic: DELETE Request
+Difficulty: Medium
+
+Problem:
+Delete a user.
+=========================================
+*/
+
+// Arrow Function
+const deleteUser = async() => {
+
+    const response = await fetch(
+
+        "https://jsonplaceholder.typicode.com/users/1",
+
+        {
+
+            method: "DELETE"
+
+        }
+
+    );
+
+    if (response.ok) {
+
+        console.log(
+
+            "User Deleted"
+
+        );
+
+    }
+
+};
+
+// Function Call
+deleteUser();
+
+/*
+Explanation
+
+DELETE
+
+↓
+
+Remove Resource
+
+Real Project
+
+Delete User
+
+Delete Todo
+
+Delete Product
+*/
