@@ -346,3 +346,147 @@ false
 
 Throw Error
 */
+
+/*
+=========================================
+Question 08
+Topic: POST Request
+Difficulty: Medium
+
+Problem:
+Create a new user.
+=========================================
+*/
+
+// Arrow Function
+const createUser = async() => {
+
+    const newUser = {
+
+        name: "Subhadeep",
+
+        email: "subhadeep@gmail.com"
+
+    };
+
+    const response = await fetch(
+
+        "https://jsonplaceholder.typicode.com/users",
+
+        {
+
+            method: "POST",
+
+            headers: {
+
+                "Content-Type":
+
+                    "application/json"
+
+            },
+
+            body: JSON.stringify(
+
+                newUser
+
+            )
+
+        }
+
+    );
+
+    const data = await response.json();
+
+    console.log(data);
+
+};
+
+// Function Call
+createUser();
+
+/*
+Explanation
+
+POST
+
+↓
+
+Create New Data
+
+body
+
+↓
+
+Request Data
+
+JSON.stringify()
+
+↓
+
+Object → JSON
+*/
+
+/*
+=========================================
+Question 09
+Topic: PUT Request
+Difficulty: Medium
+
+Problem:
+Update existing user.
+=========================================
+*/
+
+// Arrow Function
+const updateUser = async() => {
+
+    const response = await fetch(
+
+        "https://jsonplaceholder.typicode.com/users/1",
+
+        {
+
+            method: "PUT",
+
+            headers: {
+
+                "Content-Type":
+
+                    "application/json"
+
+            },
+
+            body: JSON.stringify({
+
+                name: "Updated User"
+
+            })
+
+        }
+
+    );
+
+    const data = await response.json();
+
+    console.log(data);
+
+};
+
+// Function Call
+updateUser();
+
+/*
+Explanation
+
+PUT
+
+↓
+
+Update Entire Resource
+
+Real Project
+
+Edit Profile
+
+Update Product
+*/
